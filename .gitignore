@@ -1,0 +1,12 @@
+build
+int_client/build
+int_client/release/int_client
+int_client/.vscode
+int_client/CMakeLists.txt.user
+int_client/.clang-format
+int_server/build
+int_server/release/int_server
+int_server/.vscode
+int_server/CMakeLists.txt.user
+int_server/.clang-format
+

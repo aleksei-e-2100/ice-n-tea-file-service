@@ -1,0 +1,14 @@
+[Unit]
+Description=iCE && tEA File Server
+After=network.target
+
+[Service]
+User=[пользователь, от имени которого будет запускаться серверная часть]
+Group=[группа, может совпадать с именем пользователя]
+WorkingDirectory=[асолютный путь к рабочей директории, в нее будут сохраняться поступающие от клиентов файлы]
+ExecStart=[асолютный путь к бинарному файлу]/int_server [порт сервера]
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
