@@ -1,0 +1,19 @@
+[Unit]
+Description=iCE && tEA File Service
+After=network.target
+
+[Service]
+User=[user account used to run the server]
+Group=[group account, can be the same as the user]
+
+# Директория, в которой будет искаться filesvc.conf
+WorkingDirectory=[absolute path]
+
+ExecStart=[absolute path to the binary]/filesvc --listen
+
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
+
